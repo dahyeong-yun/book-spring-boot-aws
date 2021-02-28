@@ -13,3 +13,6 @@
 - https://defacto-standard.tistory.com/445
 - https://stackoverflow.com/questions/24006937/lombok-annotations-do-not-compile-under-intellij-idea/30125507#30125507
 - https://m.blog.naver.com/light-star/221969272088
+
+## AssertJ가 JUnit의 assertThat 보다 편리한 이유
+- http://bit.ly/30vm9Lg
