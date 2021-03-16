@@ -14,8 +14,23 @@ cache:
 
 script: './gradlew clean build'
 
-# CI 실행 완료시 메일로 알림
+before_deploy:
+  - zip -r spring-boot-aws *
+  - mkdir -p deploy
+  - mv spring-boot-aws.zip deploy/spring-boot-aws.zip
 
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY # Travis repos에 설정
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: spring-boot-aws-build
+    region: ap-northeast-2
+    skip_cleanup: true
+    acl: private # zip 파일 접근 권한한
+    local_dir: deploy
+    wait-until-deployed: true
+
+# CI 실행 완료시 메일로 알림
 notifications:
   email:
     recipients:
