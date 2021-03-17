@@ -30,8 +30,19 @@ deploy:
     local_dir: deploy
     wait-until-deployed: true
 
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY # Travis repos에 설정
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: spring-boot-aws-build
+    keye: spring-boot-aws-webapp.zip
+    bundle_type: zip
+    application: spring-boot-aws-webapp
+    deployment_group: spring-boot-aws-webapp
+    region: ap-northeast-2
+    wait-until-deployed: true
+
 # CI 실행 완료시 메일로 알림
 notifications:
   email:
     recipients:
-      - 본인 메일 주소
+      - gryb809@gmail.com
