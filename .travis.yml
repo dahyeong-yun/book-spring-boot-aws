@@ -15,9 +15,9 @@ cache:
 script: './gradlew clean build'
 
 before_deploy:
-  - zip -r spring-boot-aws *
+  - zip -r book_spring-boot-aws *
   - mkdir -p deploy
-  - mv spring-boot-aws.zip deploy/spring-boot-aws.zip
+  - mv book_spring-boot-aws.zip deploy/book_spring-boot-aws.zip
 
 deploy:
   - provider: s3
