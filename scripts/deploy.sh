@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REPOSITORY=/home/ec2-user/app/step2
-PROJECT_NAME=boook_spring-boot-aws
+PROJECT_NAME=book_spring-boot-aws
 
 echo "> Build 파일 복사"
 cp $REPOSITORY/zip.*.jar $REPOSITORY/
