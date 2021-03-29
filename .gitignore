@@ -3,4 +3,6 @@
 .idea
 # bulid
 out
+build
 application-oauth.properties
+application-real-db.properties

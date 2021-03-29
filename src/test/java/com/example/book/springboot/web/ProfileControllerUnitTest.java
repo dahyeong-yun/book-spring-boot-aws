@@ -1,6 +1,6 @@
 package com.example.book.springboot.web;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.springframework.mock.env.MockEnvironment;
 
