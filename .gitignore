@@ -4,5 +4,5 @@
 # bulid
 out
 build
-application-oauth.properties
+application-real-oauth.properties
 application-real-db.properties
